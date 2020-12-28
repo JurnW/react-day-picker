@@ -37,6 +37,11 @@ export default class Weekday extends Component {
     } else {
       content = localeUtils.formatWeekdayShort(weekday, locale);
     }
+    if (weekdayLetter) {
+      content = weekdayLetter[weekday];
+    } else {
+      content = localeUtils.formatWeekdayLetter(weekday, locale);
+    }
 
     return (
       <div className={className} role="columnheader">

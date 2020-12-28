@@ -3,15 +3,15 @@
 import moment from 'moment';
 
 export function formatDay(day, locale = 'en') {
-  return moment(day)
-    .locale(locale)
-    .format('ddd ll');
+  return moment(day).locale(locale).format('ddd ll');
 }
 
 export function formatMonthTitle(date, locale = 'en') {
-  return moment(date)
-    .locale(locale)
-    .format('MMMM YYYY');
+  return moment(date).locale(locale).format('MMMM YYYY');
+}
+
+export function formatWeekdayLetter(day, locale = 'en') {
+  return moment.localeData(locale).weekdaysMin()[day];
 }
 
 export function formatWeekdayShort(day, locale = 'en') {
@@ -47,6 +47,7 @@ export function parseDate(str, format = 'L', locale = 'en') {
 export default {
   formatDay,
   formatMonthTitle,
+  formatWeekdayLetter,
   formatWeekdayShort,
   formatWeekdayLong,
   getFirstDayOfWeek,

@@ -4,6 +4,7 @@ export const LocaleUtils: {
   formatMonthTitle(month: Date, locale?: string): string;
   formatWeekdayLong(weekday: number, locale?: string): string;
   formatWeekdayShort(weekday: number, locale?: string): string;
+  formatWeekdayLetter(weekday: number, locale?: string): string;
   getFirstDayOfWeek(locale?: string): number;
   getMonths(
     locale?: string

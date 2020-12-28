@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 const PrimitiveTypes = {
   localeUtils: PropTypes.shape({
     formatMonthTitle: PropTypes.func,
+    formatWeekdayLetter: PropTypes.func,
     formatWeekdayShort: PropTypes.func,
     formatWeekdayLong: PropTypes.func,
     getFirstDayOfWeek: PropTypes.func,

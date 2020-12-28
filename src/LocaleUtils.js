@@ -8,6 +8,7 @@ const WEEKDAYS_LONG = [
   'Saturday',
 ];
 
+const WEEKDAYS_LETTER = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
 const WEEKDAYS_SHORT = ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'];
 
 const MONTHS = [
@@ -33,6 +34,10 @@ export function formatMonthTitle(d) {
   return `${MONTHS[d.getMonth()]} ${d.getFullYear()}`;
 }
 
+export function formatWeekdayLetter(i) {
+  return WEEKDAYS_LETTER[i];
+}
+
 export function formatWeekdayShort(i) {
   return WEEKDAYS_SHORT[i];
 }
@@ -52,6 +57,7 @@ export function getMonths() {
 export default {
   formatDay,
   formatMonthTitle,
+  formatWeekdayLetter,
   formatWeekdayShort,
   formatWeekdayLong,
   getFirstDayOfWeek,
